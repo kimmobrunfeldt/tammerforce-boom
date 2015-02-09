@@ -31,5 +31,3 @@ node_modules
 .DS_Store
 
 # Browserify and style builds
-bundle.js
-bundle.css
