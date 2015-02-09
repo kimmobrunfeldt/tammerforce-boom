@@ -103,7 +103,7 @@ function setupWorld(canvas, world) {
             ,restitution: 0.99
             ,label: 'box'
             ,styles: {
-                src: '/images/' + images[i]
+                src: 'images/' + images[i]
                 ,width: 60
                 ,height: 60
             }
