@@ -1,0 +1,35 @@
+{
+  "name": "frontend-starter",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Starting point for a frontend project",
+  "main": "",
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^8.1.3",
+    "less": "^2.4.0",
+    "node-static": "^0.7.6",
+    "watch": "^0.13.0",
+    "watchify": "^2.3.0"
+  },
+  "scripts": {
+    "start": "./tools/tmux 'npm run serve' 'npm run watch-js' 'npm run watch-less'",
+    "serve": "static -c 0 src",
+    "build": "npm run build-js & npm run build-less",
+    "build-js": "browserify -v scripts/main.js -o src/bundle.js",
+    "build-less": "lessc src/styles/main.less src/bundle.css",
+    "watch": "npm run watch-js & npm run watch-less",
+    "watch-js": "watchify src/scripts/main.js -d -o src/bundle.js -v",
+    "watch-less": "watch \"npm run build-less\" src/styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kimmobrunfeldt/frontend-starter.git"
+  },
+  "author": "Kimmo Brunfeldt <kimmobrunfeldt@gmail.com> (http://kimmobrunfeldt.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kimmobrunfeldt/frontend-starter/issues"
+  },
+  "homepage": "https://github.com/kimmobrunfeldt/frontend-starter"
+}
